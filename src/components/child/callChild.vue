@@ -7,6 +7,7 @@
 <script>
 	export default {
 		name: 'callChildOne',
+		// 子组件利用props来接受父组件传递的数据
 		props: ['msg']
 	}
 </script>

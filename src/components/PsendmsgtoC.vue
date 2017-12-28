@@ -5,6 +5,7 @@
 		<p>单向数据流动是vue推荐的，就是父组件改变影响子组件，反之则不影响一般用prop座位桥梁</p>
 		<h1>这是父组件</h1>
 		<p></p>
+		<!-- 利用v-bind:子组件数据名=‘父组件要发送的数据’ -->
 		<callChildOne :msg="msg"></callChildOne>
 	</div>
 </template>
