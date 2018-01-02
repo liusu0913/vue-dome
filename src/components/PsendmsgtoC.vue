@@ -4,6 +4,7 @@
 		<p>双向数据流动：父组件数据改变影响子组件数据，子组件数据改变影响父组件数据（不推荐，危险性太高一个父组件拥有众多的子组件，一个子组件数据改变影响了父组件，全部的子组件数据都改变）</p>
 		<p>单向数据流动是vue推荐的，就是父组件改变影响子组件，反之则不影响一般用prop座位桥梁</p>
 		<h1>这是父组件</h1>
+		<p class="tit">以下是同步传递数据</p>
 		<p>input框是用来改变父组件数据的看看对子组件是否产生影响</p>
 		<input type="text" name="" v-model='msg'>
 		<!-- 利用v-bind:子组件数据名=‘父组件要发送的数据’ -->
@@ -15,21 +16,39 @@
 		</ul>	
 		<p>子组件2</p>
 		<callChildTwo :msg-string='msg1' :msg-array='msg3'></callChildTwo>
+		<p class="tit">异步传递数据</p>
+		<callChildThree :msg-sync='msg4'></callChildThree>
 	</div>
 </template>
 <script>
 	import callChildOne from './child/callChild.vue';
 	import callChildTwo from './child/callchildtwo.vue';
+	import callChildThree from './child/callChildThree.vue';
 	export default {
 		name: 'PsendC',
 		data() {
-			return {
+			var obj = {
 				msg: '--父组件的数据--',
 				msg1: '父组件的数据',
 				msg2: '1',
-				msg3: ['one','two','tree']
+				msg3: ['one','two','tree'],
+				msg4: null
 			}
+			setTimeout(function() {
+				obj.msg4 = {
+					msg: '异步传递数据'
+				}
+			},1000)
+
+			return obj;
 		},
-		components: {callChildOne,callChildTwo}
+		components: {callChildOne,callChildTwo,callChildThree}
 	}
 </script>
+<style>
+	.tit {
+		font-size: 25px;
+		font-weight: bold;
+		color: red;
+	}
+</style>
