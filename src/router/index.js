@@ -5,6 +5,7 @@ import hello from '@/components/hello'
 import linkP from '@/components/linkP'
 import msg from '@/components/msg'
 import call from '@/components/PsendmsgtoC'
+import send from '@/components/CsendmsgtoP'
 import childRoute from '@/components/childRoute'
 import childone from '@/components/child/childone.vue'
 
@@ -45,6 +46,11 @@ export default new Router({
         path: '/call',
         name: 'call',
         component: call,
+    },
+    {
+        path: '/send',
+        name: 'send',
+        component: send,
     }
   ]
 })

@@ -27,4 +27,21 @@ npm run e2e
 npm test
 ```
 
+
+## 分支
+
+``` bash
+# call分支是组件之间的传递的例子；
+## PsendmsgtoC是父组件传递给子组件的例子，对应的子组件是callChild*这几个组件；
+利用的prop和不同类型的数据的操作；
+
+## CsendmsgtoP是子组件传递数据给父组件的例子，对应的子组件是childMsg组件；
+利用父组件设置$on(v-on)的监听，子组件设置$emit触发函数来改变进行子组件影响父组件的操作
+
+
+
+```
+
+
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

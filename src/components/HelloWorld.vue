@@ -10,6 +10,8 @@
     <br>
     <router-link :to="{path:'/call'}">利用prop进行父子组件之间通讯</router-link>
     <br>
+    <router-link :to="{path:'/send'}">利用$on和$emit进行子组件传递数据给父组件</router-link>
+    <br>
     <p @click="go">进入childRoute</p>
     
   </div>  
