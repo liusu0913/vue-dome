@@ -8,6 +8,8 @@
     <br>
     <router-link :to="{path:'/msg'}">数据请求页面msg用vue-resoure</router-link>
     <br>
+    <router-link :to="{path:'/vuex'}">vuex</router-link>
+    <br>
     <p @click="go">进入childRoute</p>
     
   </div>  

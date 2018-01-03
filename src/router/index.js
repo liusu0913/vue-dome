@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import hello from '@/components/hello'
 import linkP from '@/components/linkP'
 import msg from '@/components/msg'
+import vuex from '@/components/vuex/vuex.vue'
 import childRoute from '@/components/childRoute'
 import childone from '@/components/child/childone.vue'
 
@@ -39,6 +40,11 @@ export default new Router({
     	children: [ //子路由的设置
     		{path:'childone/',component: childone}
     	]
+    },
+    {
+        path: '/vuex',
+        name: 'vuex',
+        component: vuex
     }
   ]
 })
