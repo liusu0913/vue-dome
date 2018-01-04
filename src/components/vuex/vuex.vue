@@ -14,9 +14,15 @@
 	  	<button @click="one">同步点击</button>
 	  	<button @click="two">异步点击</button>
 	  </div>
+	  <bOne></bOne>
+	  <two></two>
 	</div>
 </template>
 <script>
+
+	import bOne from './brother/one.vue';
+	import two from './brother/two.vue';
+
 	export default {
 		name: 'vuexIndex',
 		data() {
@@ -48,7 +54,8 @@
 					step: 10
 				})
 			}
-		}
+		},
+		components: { bOne, two }
 		
 
 	}
@@ -56,7 +63,6 @@
 <style>
 .count {
 	width: 500px;
-	height: 500px;
 	margin: 50px auto;
 	background-color: greenyellow;
 }

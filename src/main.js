@@ -18,7 +18,6 @@ const store = new Vuex.Store({
 	mutations: {
 		add(state,obj) {
 			// 这里的state就代表了store.state对象
-			console.log(state);
 			state.count += obj.step;
 		}
 	},
@@ -26,7 +25,6 @@ const store = new Vuex.Store({
 	actions: {
 		addAsync(state, obj) {
 			// 这里的异步的函数的state代表了store对象
-			console.log(state);
 			setTimeout(()=>{
 				state.commit('add',obj);//这里的state.commit指定了用同步方法：第一个参数确定的是方法名字；这个方法会触发vue-devtools的记录
 				// state.state.count += obj.step; // 不会触发vue-devtools的记录
